@@ -1,0 +1,28 @@
+# Grok Bot, in plain English
+
+> A plain-language guide to Grok Bot, xAI's always-on AI helpers: what it is, how it works, the 56 ready-made jobs it can take on, what it costs, and what to trust it with. Written for non-technical readers. Not affiliated with xAI.
+
+Grok Bot launched in beta on 11 August 2026. Helpers work on a cloud computer that stays on, sign into the tools you already use, and come back when they need a decision. Helpers on one account share that computer. It is distinct from Grok (the chat assistant at grok.com) and from @grok (the reply account on X).
+
+## Pages
+- [Overview](/): what it is in short, four key concepts, where to start
+- [How it works](/how-it-works): hiring an assistant rather than using an app; Grok vs @grok on X vs Grok Bot; five things to know (cloud computer shared per account, show it once, runs on a schedule, learns your way, helpers work together, X connector); a morning start to finish
+- [56 jobs you could hand over](/jobs): searchable, grouped by Everyday, Sales, Marketing, Support, Hiring, Money, Product, Technical, Personal; each tagged with a suggested cadence (one-off, recurring, monitoring) and oversight level (low, review, approval)
+- [Avatar system](/avatar-system): interactive studio, 8 shapes, 12 colours, 16 expressions, 15 exported state previews, the six working moods, how the avatar is drawn
+- [Getting started](/getting-started): eight things to say on day one with links to xAI's ready-made helpers; choosing a first job; your first week (observe, delegate, refine, loosen)
+- [Trust & cost](/trust-and-cost): hand over / review / approve; what to trust it with; an oversight matrix; what it costs (SuperGrok from $30/mo, Cursor Pro from $20/mo, Cursor Teams from $40/seat, enterprise on request); keeping costs predictable
+- [Sources & methodology](/sources): official, community and outside sources, and what is official versus inferred
+
+## Key facts
+- Maker: xAI (SpaceXAI), built with Cursor. Launched 11 Aug 2026, enterprise 3 Sep 2026. Still in beta.
+- Platforms: macOS, Windows, Linux, iPhone (iOS 18+), Android 9+. Not iPad.
+- Not sold standalone; bundled with SuperGrok (not Lite), Cursor Pro and up, Cursor Teams, or by linking X Premium+. Helper usage is a weekly allowance, then on-demand. SuperGrok Lite is not included.
+- Official pages: https://x.ai/bot, https://x.ai/bot/use-cases, https://x.ai/bot/marketplace, https://x.ai/bot/guides, https://docs.x.ai/grok-bot/faq
+
+## Optional
+- [Full text of the page](/llms-full.txt)
+- [Official launch post](https://x.ai/news/introducing-grok-bot)
+- [Enterprise announcement](https://x.ai/news/grok-bot-for-enterprise)
+- [X integration](https://x.ai/news/grok-bot-and-x)
+- [More plans](https://x.ai/news/grok-bot-more-plans)
+- [Design write-up](https://x.ai/news/designing-grok-bot)

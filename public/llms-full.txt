@@ -1,0 +1,334 @@
+# Grok Bot, in plain English
+
+Grok Bot 
+
+# They never log off
+
+Grok Bot isn't a chatbot you ask questions. It's a small team of helpers you hand real work to, and they finish it while you're asleep. 
+
+
+The basics 
+
+## What it is
+
+Think of it as hiring an assistant rather than using an app. 
+ 
+You create a helper for one job — sorting your inbox, keeping expenses tidy, chasing job applicants. You log it into the accounts it needs, the same way you'd give a new colleague access on their first day. Then you message it like you'd text a coworker, and it goes and does the work. 
+ 
+The part that makes it different: the work happens on a computer in the cloud, always on, not on your laptop. It opens websites and clicks through them exactly like a person would. So it can use the clunky old systems that never work with anything else, and it keeps going when your laptop is shut. All the helpers on your account share that one computer, so they can hand jobs off — they aren't separate locked rooms. 
+ 
+It comes back when the job is finished, or when it needs you to decide something. You can have several running at once, each on a different job. 
+
+Easily confused 
+
+## Which Grok is which
+
+Three different things share the name, and most of the confusion starts here. 
+
+#### Grok
+
+The chat assistant at grok.com and in the phone apps. You ask, it answers. It can also search, talk out loud, and make pictures and video. 
+
+#### @grok on X
+
+The account you tag under a post on X to get a reply in the thread. Free, with limits. This is what most people mean when they say "the Grok bot" — but it's not the thing this page is about. 
+
+#### Grok Bot
+
+The one on this page. Helpers that do jobs for you inside your own accounts, on a cloud computer that stays on around the clock. 
+
+How it works 
+
+## Five things to know
+
+#### It works on a cloud computer
+
+Always switched on, out in the cloud. It stays logged into your accounts between jobs, so it picks up where it left off instead of starting cold. Every helper on your account shares that computer, and each one gets its own screen on it. 
+
+#### You show it once
+
+Rather than setting anything up, you do the job yourself one time while it watches. It remembers the steps and does it on its own from then on. 
+
+#### It runs on a schedule
+
+Every weekday at seven, or whenever a certain kind of email lands. You can look back at what it did on any given day. 
+
+#### It learns your way
+
+It picks up how you write, your usual exceptions, who signs off on what, and when to interrupt you versus carry on quietly. 
+
+#### They work together
+
+Put a few helpers in one chat and they hand jobs between themselves, with one of them keeping the others on track. You step in for the real decisions. You can also connect X (https://x.ai/news/grok-bot-and-x), so a helper can search posts, read your timeline and check mentions. Paid users get some free X API credits to start. 
+
+Every helper gets a face: one simple shape, two eyes. In the product, that face shows six working moods — Idle, Working, Waiting, Blocked, Thinking and Done — so you can read the roster at a glance. Four you'll see most: 
+
+#### Idle
+
+Calm, slightly curious. Nothing on right now. 
+
+#### Thinking
+
+Three dots. It's working something out. 
+
+#### Orbit
+
+Rings spinning. Hard at work — leave it be. 
+
+#### Notification
+
+A blue dot appears. It needs you. 
+
+The supplied artwork includes fifteen state previews, in order: Idle, Thinking, Wink, Wide eyes, Alert, Notification, Exclamation, Sleep, Egg, Hexagon, Play, Orbit, Swirl, Burst, Comet. These are exported still images, not recordings of the animations. 
+
+And at rest, a face can wear one of sixteen expressions: Neutral, Attentive, Surprised, Excited, Happy, Laughing, Angry, Sad, Scared, Suspicious, Confused, Curious, Proud, Shy, Unimpressed and Sleepy. 
+
+ Neutral 
+ Attentive 
+ Surprised 
+ Excited 
+ Laughing 
+ Angry 
+ Suspicious 
+ Confused 
+ Proud 
+ Shy 
+ Unimpressed 
+ Sleepy 
+ 
+The body comes in eight shapes and twelve colours: 
+
+ Circle 
+ Pebble 
+ Squircle 
+ Capsule 
+ Triangle 
+ Hexagon 
+ Cloud 
+ Droplet 
+
+ Ink 
+ Cream 
+ Brown 
+ Red 
+ Orange 
+ Amber 
+ Green 
+ Turquoise 
+ Blue 
+ Purple 
+ Pink 
+ Grey 
+ 
+Want to make your own? grokbots.ai/studio (https://grokbots.ai/studio) lets you pick a shape, expression and colour, play every animation, and download it as a picture. It's a community project, not xAI's, built on Jérémy Perret's open-source recreation of the avatar (https://github.com/jeremy-prt/bloub). xAI's own design write-up is the source for the six working moods (https://x.ai/news/designing-grok-bot). 
+
+An example 
+
+## A morning, start to finish
+
+One helper looking after customer emails. 
+
+You ask 
+
+#### The job
+
+"Check the support inbox every morning and write the replies. Don't send anything — leave them for me." 
+
+It sets up 
+
+#### Getting in
+
+You log it into the support account once, on its computer. It only ever reaches the accounts you've signed it into. 
+
+It works 
+
+#### Overnight
+
+At six it reads the new messages, looks up what was said last time, checks the help pages, and writes each reply the way you would. 
+
+You wake up 
+
+#### The handover
+
+A short summary, the drafts waiting for a quick read, and nothing at all on quiet days. Your edits become how it writes tomorrow. 
+
+Use cases 
+
+## 56 jobs you could hand over
+
+These are the ready-made helpers xAI offers. Choose a group to narrow the list. Most of the popular ones have nothing to do with computers — they're sales, hiring, marketing and money. 
+
+Try it 
+
+## Things to say on day one
+
+Each of these is a real message you could send a helper. The button opens xAI's ready-made version, which you can add to your own Grok Bot with one click. 
+
+"Go through my inbox every morning, sort out what's urgent, and write replies for me to check." 
+Inbox helper Open in Grok Bot (https://x.ai/bot/s4f048c7b7da9e010c2c3) 
+
+"Read my messages, email and calendar overnight and tell me the three things that matter today." 
+Your assistant Open in Grok Bot (https://x.ai/bot/sc0a0ec3ce9c675824106) 
+
+"Before each meeting, put together who's coming, what we said last time, and what's still open." 
+Meeting prep Open in Grok Bot (https://x.ai/bot/s445a0c9a2ca4bea7729e) 
+
+"Look for people who'd suit this role, write a first message in my voice, and leave me a shortlist." 
+Finding candidates Open in Grok Bot (https://x.ai/bot/sac3a109dfe021c555c7c) 
+
+"Every Friday, pull the week's expenses together and chase anyone who hasn't sent a receipt." 
+Expenses Open in Grok Bot (https://x.ai/bot/s50bb9361d891bd788a23) 
+
+"Check the support queue twice a day, draft the replies, and only message me if something looks serious." 
+Ticket sorting Open in Grok Bot (https://x.ai/bot/s7aaf6431077930df326f) 
+
+"Find flights and a hotel for Chicago next month within my usual budget, check with me, then book it." 
+Travel Open in Grok Bot (https://x.ai/bot/sc693906bdeded166b7ba) 
+
+"Go through my receipts and find every subscription I'm paying for. Suggest what to cancel." 
+Subscriptions Open in Grok Bot (https://x.ai/bot/sb36667ce9e1fdc00cfe7) 
+
+ Get Grok Bot (https://x.ai/bot)
+ Browse all ready-made helpers (https://x.ai/bot/marketplace)
+ Read xAI's guides (https://x.ai/bot/guides)
+
+Good sense 
+
+## What to trust it with
+
+### Let it run
+
+ - Dull, repetitive jobs you already know how to do
+
+ - Gathering and tidying things up overnight, ready for you in the morning
+
+ - Writing drafts that you read before anything goes out
+
+ - Anything you could undo in a minute if it got it wrong
+
+ - Websites and systems that are a chore to click through
+
+ - Pulling scattered notes into one place before a meeting
+
+### Keep a hand on it
+
+ - Anything that spends money or pays someone
+
+ - Messages to customers or public posts, which can't be taken back
+
+ - Anything legal, medical or official, where a person has to be answerable
+
+ - Giving someone access, or deleting things
+
+ - Long stretches with nobody checking — it's new, and still in beta
+
+ - Treating two helpers as a wall between jobs — they share one computer and the logins on it
+
+The usual problem with helpers like this isn't refusing to do things. It's doing something slightly wrong with complete confidence, and nobody noticing until later. Treat it like a capable new hire in their first week: give it real work, then read what it did. Some sites will still block automation, ask for a CAPTCHA, or need you to take over — it should hand those steps back rather than push through. 
+
+Getting it 
+
+## What it costs
+
+You can't buy Grok Bot on its own. It comes with SuperGrok (not the Lite plan), with Cursor, or by linking X Premium+. You don't need Cursor — it's just another door in. Helper usage is metered on its own: a weekly allowance, then extra on demand if you turn that on, and it doesn't eat your normal chat quota. 
+
+ Plan From What you get 
+
+ SuperGrok $30 a month Helpers, plus the newest Grok and higher limits everywhere else. Bigger tiers add speed and more usage. 
+ 
+ Cursor Pro $20 a month Helpers logged into your tools, running on a schedule, on desktop and phone. 
+ 
+ Cursor Teams $40 per person The same, with one bill for the team and helpers you can share with colleagues. 
+ 
+ Larger companies Price on request Everyone in the company can use it, with controls over who can do what and a record of what every helper did. 
+
+Works on Mac, Windows, Linux, iPhone (iOS 18 or later) and Android (9 or later). Not on iPad. Prices and which plans include it have already changed more than once since launch, so check before you commit. 
+
+Starting out 
+
+## Your first week
+
+A calm way in, whether it's just you or a whole team. 
+
+ - Pick one small job you already do well, so you'd spot a mistake straight away.
+
+ - Let it write drafts only at first. Nothing sends, nothing pays, nothing gets deleted.
+
+ - Do the job once with it watching, then let it copy you for a week while you check the results.
+
+ - Only log it into the accounts that one job needs — not everything at once.
+
+ - Read what it did each morning. When you stop finding problems, loosen the reins.
+
+ - Decide up front who it should come to when something looks odd.
+
+Sources 
+
+## Where this came from
+
+xAI's own pages, plus one outside write-up for the honest bits. Older reviews still quote prices and plan limits that have already changed. This is a fast-moving product, so check anything important at the source. 
+
+ Grok Bot — the official page (https://x.ai/bot)
+ The launch announcement, August 2026 (https://x.ai/news/introducing-grok-bot)
+ The full list of ready-made helpers (https://x.ai/bot/use-cases)
+ How companies are using it, September 2026 (https://x.ai/news/grok-bot-for-enterprise)
+ An outside review of the limits (https://www.vellum.ai/blog/official-grok-bot-breakdown)
+
+## The 56 ready-made helpers
+- Everyday — Your assistant: Reads through your messages, email, calendar and meeting notes, then tells you what's new, why it matters and what to do about it.
+- Everyday — Morning catch-up: A short briefing to start the day, and an instant summary whenever you're pulled into a conversation halfway through.
+- Everyday — Inbox helper: Sorts your email into sensible piles, points out what's urgent, and writes the replies. You still press send.
+- Everyday — News filter: Cuts the day's noise down to the few stories that actually matter to you.
+- Everyday — To-do keeper: Collects every loose promise from documents, meetings and chats into one list, with a morning reminder.
+- Everyday — Slide maker: Builds presentations using your own template, so you never start from a blank slide.
+- Sales — Finding customers: Looks up companies overnight, works out who's worth contacting, writes the emails in your voice, and leaves them for you to approve.
+- Sales — Company research: Digs into a company before you speak to them and puts together a short briefing you can share.
+- Sales — Pipeline check: Tidies your records, points out deals that have gone quiet, and leaves a Monday morning scoreboard.
+- Sales — Record keeping: Keeps customer records and contact lists up to date before and after meetings, so nobody has to do it by hand.
+- Sales — Meeting prep: Gathers who's in the room, what was said last time, what's still open, and a suggested agenda.
+- Sales — Deal paperwork: Writes up the internal notes for a deal from past emails and calls, then files them once you say yes.
+- Sales — Slide updates: Updates the deck with what you just heard on the call, with next steps already on the slide.
+- Sales — Renewals: Puts together everything you need before a renewal conversation and drafts the note to the customer.
+- Sales — Call coaching: Listens back to your calls and leaves notes on what went well and what to try next time.
+- Sales — Weekly call list: Builds the week's list of people to contact, with their details already filled in.
+- Marketing — Ad budgets: Watches how campaigns are doing, suggests moving money between them, and waits for your yes before changing anything.
+- Marketing — Ad ideas: Spots which ads are quietly working, explains why, and suggests what to try next.
+- Marketing — Watching rivals: Keeps an eye on what competitors launch, and checks your own site for anything gone stale.
+- Marketing — Search visibility: Tracks whether people are finding you, flags what's broken, and hands back a list of fixes.
+- Marketing — Social posts: Learns how you write, drafts posts when something worth sharing happens, and keeps the queue full.
+- Marketing — Newsletter: Gathers the month's news and writes the issue in your voice, ready for one editing pass.
+- Marketing — Company announcements: Writes clear internal updates from what's actually going on, matched to who's reading.
+- Marketing — Content calendar: Keeps the plan for posts, launches and events in one place and up to date.
+- Marketing — Lead campaigns: Keeps ads, sign-up forms and follow-up messages consistent, drafting each campaign for approval.
+- Marketing — Reasons to reach out: Watches for news at companies you care about — awards, launches, hiring — and tells you when it's worth saying something.
+- Marketing — Community: Handles applications and messages across your channels and keeps in touch on a regular rhythm.
+- Marketing — Guest list: Scores people applying to your event and waves the right ones through.
+- Marketing — Merchandise: Runs the outreach, checks who claimed what, and sends the supplier a daily list.
+- Support — Customer health: Watches how customers are using things and turns the noise into a short watch list.
+- Support — Account care: Preps every call from past notes and conversations, writes the follow-ups, and keeps next steps current.
+- Support — Ticket sorting: Checks the support queue regularly, drafts replies, and stays quiet when there's nothing to do.
+- Support — Sending materials: Finds the recording or the document someone asked for, tidies it up, and writes the reply with the links in.
+- Hiring — Finding candidates: Searches overnight, writes the first message in your voice, skips anyone you've already spoken to, and books the interviews.
+- Hiring — First screen: Reads applications and work samples against your bar and hands back a shortlist.
+- Hiring — New starters: Builds the joining checklist, gathers the right documents, and answers first-day questions.
+- Hiring — Scheduling: Finds a slot everyone can make, then chases the people who haven't replied.
+- Money — Expenses: Builds the weekly summary, files receipts that arrive by email, and nudges people who haven't tagged theirs.
+- Money — Invoices: Keeps invoices moving, matches what it can, and only raises the ones that need a person.
+- Money — Contracts: Shows you the week's paperwork at a glance — where each one is, who has it, what's stuck.
+- Money — Supplier accounts: Handles renewals and seat changes on supplier websites and only reports back the odd ones.
+- Money — Long forms: Fills in those endless questionnaires from your past answers and leaves the submit button to you.
+- Product — Feedback: Gathers what customers are saying from everywhere, groups it, and suggests what to do first.
+- Product — Who asked for it: Keeps a running list of requests tied to the customers who made them.
+- Product — Help pages: Checks your guides against what actually changed and rewrites the parts that are out of date.
+- Product — New feature uptake: Shows who's actually trying something new, so the team knows who to follow up with.
+- Product — Common questions: Notices the questions that keep coming up on calls and links back to where they were answered.
+- Technical — Recreating problems: Follows the exact steps a customer described, records what goes wrong, and writes it up with screenshots.
+- Technical — Speed checks: Looks at what's running slowly and comes back with a short, readable summary.
+- Technical — Trying to break it: Clicks through your product the way an awkward customer would and reports everything that falls over.
+- Technical — Quick mock-ups: Turns an idea into something you can click on and sends you the link.
+- Technical — Keeping jobs moving: Starts the long-running jobs, watches them, chases whatever gets stuck, and summarises the lot.
+- Personal — Travel: Compares flights and hotels against your preferences, checks with you, then books and adds it to your calendar.
+- Personal — Flat hunting: Filters new listings, emails to arrange viewings, and applies for the ones you like.
+- Personal — Subscriptions: Finds what you're quietly paying for, suggests what to cut, and cancels whatever you approve.
+- Personal — Personal website: Puts together a simple site from a description and sorts out the address, leaving you something live to edit.
+
