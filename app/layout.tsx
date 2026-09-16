@@ -49,13 +49,13 @@ export const metadata: Metadata = {
     description: SITE_DESCRIPTION,
     url: "/",
     siteName: SITE_NAME,
-    images: [{ url: "/og/overview", width: 1200, height: 630 }],
+    images: [{ url: "/og/overview.png", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
     title: SITE_SHORT_TITLE,
     description: SITE_DESCRIPTION,
-    images: ["/og/overview"],
+    images: ["/og/overview.png"],
   },
 };
 

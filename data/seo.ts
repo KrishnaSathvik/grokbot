@@ -61,4 +61,4 @@ export function seoPage(href: string) {
   if (!(href in PAGE_SEO)) throw new Error(`Unknown SEO page: ${href}`);
   return PAGE_SEO[href as SeoPath];
 }
-export const ogPath = (href: string) => `/og/${href === "/" ? "overview" : href.slice(1)}`;
+export const ogPath = (href: string) => `/og/${href === "/" ? "overview" : href.slice(1)}.png`;

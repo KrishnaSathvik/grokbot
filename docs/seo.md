@@ -1,10 +1,10 @@
 # SEO configuration
 
-- `data/seo.ts`: exact page titles, descriptions, social copy and image headlines.
+- `data/seo.ts`: exact page titles, descriptions, social copy and image headlines. `ogPath()` points at static cards in `public/og/`.
 - `lib/site.ts`: site identity, canonical origin and metadata helper.
-- `app/og/[slug]/route.tsx`: seven prerendered 1200 × 630 PNG cards using the supplied logo.
+- `public/og/*.png`: seven static 1200 × 630 Open Graph cards (one per guide page).
 - `app/sitemap.ts` and `app/robots.ts`: crawl discovery.
-- `docs/og-image-prompts.md`: master and individual reusable prompts.
+- `docs/og-image-prompts.md`: reusable prompts if the cards need regenerating.
 
 ## Production setup
 
@@ -20,4 +20,4 @@ The existing supplied logo is preserved, including its baked-in checkerboard bac
 
 ## Verification
 
-Run `npm run lint`, `npm run test`, `npm run build -- --webpack`, then `npm run test:e2e`. Inspect the generated images at `/og/overview`, `/og/how-it-works`, `/og/jobs`, `/og/avatar-system`, `/og/getting-started`, `/og/trust-and-cost`, `/og/sources`.
+Run `npm run lint`, `npm run test`, `npm run build`, then `npm run test:e2e`. Inspect the static cards at `/og/overview.png`, `/og/how-it-works.png`, `/og/jobs.png`, `/og/avatar-system.png`, `/og/getting-started.png`, `/og/trust-and-cost.png`, `/og/sources.png`.

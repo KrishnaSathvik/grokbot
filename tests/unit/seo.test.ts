@@ -1,6 +1,21 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
+import { existsSync } from "node:fs";
+import { join } from "node:path";
+import { GUIDE_PAGES } from "@/data/navigation";
+import { ogPath } from "@/data/seo";
 
 afterEach(() => { vi.unstubAllEnvs(); vi.resetModules(); });
+
+describe("static og cards", () => {
+  it("maps every guide page to a public/og PNG", () => {
+    for (const page of GUIDE_PAGES) {
+      const path = ogPath(page.href);
+      expect(path).toMatch(/^\/og\/[a-z0-9-]+\.png$/);
+      expect(existsSync(join(process.cwd(), "public", path.slice(1)))).toBe(true);
+    }
+  });
+});
+
 describe("indexing configuration", () => {
   it("keeps an unconfigured build unindexed without fake canonicals", async () => {
     vi.stubEnv("SITE_URL", "");

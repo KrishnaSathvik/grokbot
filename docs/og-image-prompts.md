@@ -1,6 +1,6 @@
 # Open Graph image prompts
 
-The shipped cards are deterministic Next.js images at `/og/[slug]`. These prompts are reusable alternatives for an image tool. Attach the logo as Image A; for the avatar card attach `public/avatars/state-idle-blue.png` as Image B. The existing logo has a baked-in checkerboard; replace it with a transparent master when available.
+The shipped cards are static PNGs in `public/og/{slug}.png` (1200 × 630). These prompts are for regenerating them with an image tool. Attach the logo as Image A; for the avatar card attach `public/avatars/state-idle-blue.png` as Image B. The existing logo has a baked-in checkerboard; replace it with a transparent master when available.
 
 ## Master prompt
 
