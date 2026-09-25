@@ -2,10 +2,11 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import type { GuidePage } from "@/data/navigation";
+
+type NavItem = { href: string; label: string };
 
 /** Desktop header links with the current page marked. Client-only so the active state follows the route. */
-export function NavLinks({ pages }: { pages: GuidePage[] }) {
+export function NavLinks({ pages }: { pages: NavItem[] }) {
   const pathname = usePathname();
   return (
     <>

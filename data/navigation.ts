@@ -78,15 +78,21 @@ export const GUIDE_PAGES: GuidePage[] = [
 export const HEADER_PAGES = GUIDE_PAGES.filter((p) => p.inHeader);
 export const FOOTER_PAGES = GUIDE_PAGES.filter((p) => !p.inHeader);
 
-/** Discovery layers outside the numbered guide — footer + mobile menu. */
+/** Discovery layers outside the numbered guide. */
 export interface SecondaryPage {
   href: string;
   label: string;
 }
 
-export const SECONDARY_PAGES: SecondaryPage[] = [
+/** Shown in the desktop header after the guide pillars. */
+export const HEADER_EXTRA: SecondaryPage[] = [
   { href: "/blog", label: "Blog" },
   { href: "/in-the-wild", label: "In the wild" },
+];
+
+/** Mobile menu extras: discovery + Sources. */
+export const SECONDARY_PAGES: SecondaryPage[] = [
+  ...HEADER_EXTRA,
   ...FOOTER_PAGES.map((p) => ({ href: p.href, label: p.label })),
 ];
 

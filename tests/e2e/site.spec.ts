@@ -94,7 +94,7 @@ test.describe("navigation", () => {
     test.skip(isMobile, "desktop only");
     await page.goto("/jobs");
     const nav = page.getByRole("navigation", { name: "Guide pages" }).first();
-    for (const label of ["Overview", "How it works", "Jobs", "Avatar system", "Getting started", "Trust & cost"]) {
+    for (const label of ["Overview", "How it works", "Jobs", "Avatar system", "Getting started", "Trust & cost", "Blog", "In the wild"]) {
       await expect(nav.getByRole("link", { name: label })).toBeVisible();
     }
     await expect(nav.getByRole("link", { name: "Jobs" })).toHaveAttribute("aria-current", "page");

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { HEADER_PAGES, SECONDARY_PAGES } from "@/data/navigation";
+import { HEADER_EXTRA, HEADER_PAGES, SECONDARY_PAGES } from "@/data/navigation";
 import { Container } from "./Container";
 import { MobileMenu } from "./MobileMenu";
 import { NavLinks } from "./NavLinks";
@@ -18,7 +18,7 @@ export function Header() {
           Grok Bot
         </Link>
         <nav aria-label="Guide pages" className="hidden items-center gap-1 lg:flex">
-          <NavLinks pages={HEADER_PAGES} />
+          <NavLinks pages={[...HEADER_PAGES, ...HEADER_EXTRA]} />
         </nav>
         <MobileMenu pages={HEADER_PAGES} extra={SECONDARY_PAGES} />
       </Container>

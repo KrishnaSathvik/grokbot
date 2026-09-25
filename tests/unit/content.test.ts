@@ -3,7 +3,7 @@ import { AROUND_THE_WEB } from "@/data/around-the-web";
 import { BLOG_POSTS, blogPost } from "@/data/blog";
 import { JOB_CATEGORIES, JOBS, STARTER_JOB_SLUGS, STARTER_JOBS } from "@/data/jobs";
 import { PROMPTS } from "@/data/prompts";
-import { FOOTER_PAGES, GUIDE_PAGES, guideNeighbours, HEADER_PAGES, SECONDARY_PAGES } from "@/data/navigation";
+import { FOOTER_PAGES, GUIDE_PAGES, guideNeighbours, HEADER_EXTRA, HEADER_PAGES, SECONDARY_PAGES } from "@/data/navigation";
 import { SOURCES } from "@/data/sources";
 import { TRUST_LEVELS } from "@/data/trust";
 import { WILD_FILTERS, WILD_PROJECTS, wildMatches, wildProject } from "@/data/wild";
@@ -51,6 +51,7 @@ describe("guide navigation", () => {
     expect(GUIDE_PAGES.map((p) => p.number)).toEqual(["01", "02", "03", "04", "05", "06", "07"]);
     expect(HEADER_PAGES.map((p) => p.href)).not.toContain("/sources");
     expect(FOOTER_PAGES.map((p) => p.href)).toEqual(["/sources"]);
+    expect(HEADER_EXTRA.map((p) => p.href)).toEqual(["/blog", "/in-the-wild"]);
     expect(SECONDARY_PAGES.map((p) => p.href)).toEqual(["/blog", "/in-the-wild", "/sources"]);
   });
   it("gives every page unique metadata", () => {
