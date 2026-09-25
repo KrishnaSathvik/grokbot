@@ -78,6 +78,18 @@ export const GUIDE_PAGES: GuidePage[] = [
 export const HEADER_PAGES = GUIDE_PAGES.filter((p) => p.inHeader);
 export const FOOTER_PAGES = GUIDE_PAGES.filter((p) => !p.inHeader);
 
+/** Discovery layers outside the numbered guide — footer + mobile menu. */
+export interface SecondaryPage {
+  href: string;
+  label: string;
+}
+
+export const SECONDARY_PAGES: SecondaryPage[] = [
+  { href: "/blog", label: "Blog" },
+  { href: "/in-the-wild", label: "In the wild" },
+  ...FOOTER_PAGES.map((p) => ({ href: p.href, label: p.label })),
+];
+
 export function guidePage(href: string): GuidePage {
   const page = GUIDE_PAGES.find((p) => p.href === href);
   if (!page) throw new Error(`Unknown guide page: ${href}`);

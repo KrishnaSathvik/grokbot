@@ -9,6 +9,15 @@ const ROUTES = [
   { href: "/getting-started", h1: /day one/, title: /Getting Started/ },
   { href: "/trust-and-cost", h1: /hand over/, title: /trust/i },
   { href: "/sources", h1: /Sources/, title: /Sources/ },
+  { href: "/blog", h1: /Explainers/, title: /Grok Bot Blog/ },
+  { href: "/in-the-wild", h1: /in the wild/i, title: /in the Wild/i },
+];
+
+const CONTENT_ROUTES = [
+  { href: "/blog/real-grok-bot-projects", h1: /15 Real Grok Bot Projects/, title: /15 Real Grok Bot Projects/ },
+  { href: "/blog/grok-bot-for-marketing", h1: /Grok Bot for Marketing/, title: /Grok Bot for Marketing/ },
+  { href: "/blog/grok-bot-security-shared-computer", h1: /Shared Computer/, title: /Shared Computer/ },
+  { href: "/in-the-wild/grokbotdev", h1: /GrokBotDev/, title: /GrokBotDev/ },
 ];
 
 test.describe("routes", () => {
@@ -32,6 +41,19 @@ test.describe("routes", () => {
     });
   }
 
+  for (const r of CONTENT_ROUTES) {
+    test(`${r.href} renders researched content with one h1`, async ({ page }) => {
+      const res = await page.goto(r.href);
+      expect(res?.status()).toBe(200);
+      await expect(page).toHaveTitle(r.title);
+      const h1 = page.locator("h1");
+      await expect(h1).toHaveCount(1);
+      await expect(h1).toContainText(r.h1);
+      await expect(page.locator("main#main")).toHaveCount(1);
+      await expect(page.locator('meta[name="twitter:card"]')).toHaveAttribute("content", "summary_large_image");
+    });
+  }
+
   test("pages end at the footer, without a previous/next band", async ({ page }) => {
     await page.goto("/");
     await expect(page.getByRole("navigation", { name: "Guide", exact: true })).toHaveCount(0);
@@ -45,6 +67,8 @@ test.describe("routes", () => {
       expect(xml).not.toContain("<loc>");
     } else {
       for (const r of ROUTES) expect(xml).toContain(`${r.href === "/" ? "/" : r.href}</loc>`);
+      expect(xml).toContain("/blog/real-grok-bot-projects</loc>");
+      expect(xml).toContain("/in-the-wild/grokbotdev</loc>");
     }
   });
 });
@@ -58,7 +82,7 @@ test.describe("navigation", () => {
     await trigger.click();
     await expect(page.getByRole("button", { name: "Close" })).toHaveAttribute("aria-expanded", "true");
     const menu = page.getByRole("navigation", { name: "Guide pages" }).last();
-    for (const label of ["Overview", "How it works", "Jobs", "Avatar system", "Getting started", "Trust & cost", "Sources"]) {
+    for (const label of ["Overview", "How it works", "Jobs", "Avatar system", "Getting started", "Trust & cost", "Blog", "In the wild", "Sources"]) {
       await expect(menu.getByRole("link", { name: label })).toBeVisible();
     }
     await menu.getByRole("link", { name: "Trust & cost" }).click();
@@ -76,10 +100,34 @@ test.describe("navigation", () => {
     await expect(nav.getByRole("link", { name: "Jobs" })).toHaveAttribute("aria-current", "page");
     await expect(nav.getByRole("link", { name: "Sources" })).toHaveCount(0);
     const footer = page.getByRole("contentinfo");
-    await expect(footer.getByRole("link")).toHaveCount(1);
-    await expect(footer.getByRole("link", { name: "Sources" })).toBeVisible();
+    await expect(footer.getByRole("link")).toHaveCount(0);
     await nav.getByRole("link", { name: "Avatar system" }).click();
     await expect(page).toHaveURL(/\/avatar-system$/);
+  });
+});
+
+test.describe("in the wild", () => {
+  test("lists projects and opens a detail page", async ({ page }) => {
+    await page.goto("/in-the-wild");
+    await expect(page.getByText(/^\d+ entr/)).toBeVisible();
+    await expect(page.getByRole("button", { name: /^GitHub/ })).toHaveCount(0);
+    await expect(page.getByRole("heading", { name: "GrokBotDev" })).toBeVisible();
+    await page.getByRole("heading", { name: "GrokBotDev" }).getByRole("link").click();
+    await expect(page).toHaveURL(/\/in-the-wild\//);
+    await expect(page.getByRole("link", { name: /View original/ })).toBeVisible();
+  });
+});
+
+test.describe("blog", () => {
+  test("lists published posts and related guide links on a post", async ({ page }) => {
+    await page.goto("/blog");
+    await expect(page.getByRole("heading", { name: "Start here" })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "By role" })).toBeVisible();
+    await expect(page.getByRole("link", { name: /15 Real Grok Bot Projects/ })).toBeVisible();
+    await expect(page.getByRole("link", { name: /Grok Bot for Marketing/ })).toBeVisible();
+    await page.getByRole("link", { name: /15 Real Grok Bot Projects/ }).click();
+    await expect(page).toHaveURL(/\/blog\/real-grok-bot-projects/);
+    await expect(page.getByRole("navigation", { name: "Related guide pages" })).toBeVisible();
   });
 });
 
@@ -184,7 +232,7 @@ test.describe("first job checklist", () => {
 });
 
 test.describe("local navigation", () => {
-  for (const href of ["/jobs", "/avatar-system", "/trust-and-cost"]) {
+  for (const href of ["/avatar-system", "/trust-and-cost"]) {
     test(`${href} has an on-this-page nav whose links resolve`, async ({ page }) => {
       await page.goto(href);
       const nav = page.getByRole("navigation", { name: "On this page" });
@@ -196,7 +244,7 @@ test.describe("local navigation", () => {
       }
     });
   }
-  for (const href of ["/", "/how-it-works", "/getting-started"]) {
+  for (const href of ["/", "/how-it-works", "/getting-started", "/jobs"]) {
     test(`${href} has no on-this-page nav`, async ({ page }) => {
       await page.goto(href);
       await expect(page.getByRole("navigation", { name: "On this page" })).toHaveCount(0);

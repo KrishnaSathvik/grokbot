@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { RelatedPosts } from "@/components/blog/RelatedPosts";
 import { PageHeader } from "@/components/layout/PageHeader";
 import { SectionNav } from "@/components/layout/SectionNav";
 import { CostControls } from "@/components/trust/CostControls";
@@ -15,7 +16,16 @@ export const metadata: Metadata = pageMetadata(HREF);
 export default function Page() {
   return (
     <>
-      <PageHeader href={HREF} title={<>What should you hand over?<br className="hidden lg:block" /> And what should you keep control of?</>} aside={<TrustScale />}>
+      <PageHeader
+        href={HREF}
+        title={
+          <>
+            What should you hand over?
+            <br className="hidden lg:block" /> And what should you keep control of?
+          </>
+        }
+        aside={<TrustScale />}
+      >
         <p>
           Both halves of this page are about boundaries: how much rope to give a helper, and how much it costs to keep one
           on. The two are connected. The jobs that need the least watching are also the cheapest to run.
@@ -36,6 +46,10 @@ export default function Page() {
         <TrustMatrix />
         <CostExplainer />
         <CostControls />
+        <RelatedPosts
+          title="Boundaries and teams"
+          slugs={["grok-bot-security-shared-computer", "grok-bot-team-workflows"]}
+        />
       </main>
     </>
   );

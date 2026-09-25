@@ -12,8 +12,7 @@ export const SITE_NAME = "Grok Bot Explained";
 export const SITE_TITLE = seoPage("/").title;
 export const SITE_SHORT_TITLE = SITE_NAME;
 export const SITE_DESCRIPTION = "Learn what Grok Bot is, how it works, what jobs you can hand over, how the avatar system works, how to get started, and what to trust it with.";
-export const LAST_UPDATED_ISO = "2026-09-15";
-export const LAST_UPDATED_LABEL = "September 2026";
+export const LAST_UPDATED_ISO = "2026-09-24";
 
 export function pageMetadata(href: string): Metadata {
   const page = seoPage(href);
@@ -25,4 +24,54 @@ export function pageMetadata(href: string): Metadata {
     openGraph: { type: "website", title: page.ogTitle, description: page.ogDescription, url: href, siteName: SITE_NAME, locale: "en_US", images: [image] },
     twitter: { card: "summary_large_image", title: page.ogTitle, description: page.ogDescription, images: [image] },
   };
+}
+
+/** Article / discovery page metadata with optional Article openGraph type. */
+export function articleMetadata({
+  href,
+  title,
+  description,
+  ogTitle,
+  ogDescription,
+  ogImageHref = "/blog",
+  publishedAt,
+  modifiedAt,
+}: {
+  href: string;
+  title: string;
+  description: string;
+  ogTitle: string;
+  ogDescription: string;
+  ogImageHref?: string;
+  publishedAt?: string;
+  modifiedAt?: string;
+}): Metadata {
+  const image = {
+    url: ogPath(ogImageHref),
+    width: 1200,
+    height: 630,
+    alt: `${ogTitle} — ${ogDescription}`,
+    type: "image/png" as const,
+  };
+  return {
+    title: { absolute: title },
+    description,
+    alternates: origin ? { canonical: href } : undefined,
+    openGraph: {
+      type: "article",
+      title: ogTitle,
+      description: ogDescription,
+      url: href,
+      siteName: SITE_NAME,
+      locale: "en_US",
+      images: [image],
+      ...(publishedAt ? { publishedTime: publishedAt } : {}),
+      ...(modifiedAt ? { modifiedTime: modifiedAt } : {}),
+    },
+    twitter: { card: "summary_large_image", title: ogTitle, description: ogDescription, images: [image] },
+  };
+}
+
+export function absoluteUrl(href: string): string {
+  return `${SITE_URL}${href === "/" ? "/" : href}`;
 }

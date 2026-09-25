@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { RelatedPosts } from "@/components/blog/RelatedPosts";
 import { AfterWeekOne } from "@/components/getting-started/AfterWeekOne";
 import { ChooseFirstTask } from "@/components/getting-started/ChooseFirstTask";
 import { FirstWeek } from "@/components/getting-started/FirstWeek";
@@ -24,6 +25,10 @@ export default function Page() {
         <ChooseFirstTask />
         <FirstWeek />
         <AfterWeekOne />
+        <RelatedPosts
+          title="After day one"
+          slugs={["grok-bot-chief-of-staff", "grok-bot-team-workflows", "grok-bot-marketplace-guide"]}
+        />
       </main>
     </>
   );

@@ -54,6 +54,22 @@ export const PAGE_SEO = {
     "ogDescription": "Official sources, community references, and the methodology behind this Grok Bot guide.",
     "headline": "Sources & methodology",
     "support": "Official pages, community references, and the methodology behind this guide."
+  },
+  "/blog": {
+    "title": "Grok Bot Blog — Explainers, Role Guides & Ecosystem Notes",
+    "description": "Narrower Grok Bot explainers than the main guide: real projects, Marketplace tours, role playbooks, SEO & AEO, security and GitHub—each linking back into Jobs and Getting started.",
+    "ogTitle": "Grok Bot Blog",
+    "ogDescription": "Explainers and role guides that extend the main Grok Bot pillars without duplicating them.",
+    "headline": "Blog",
+    "support": "Narrower explainers that link back into the guide."
+  },
+  "/in-the-wild": {
+    "title": "Grok Bot in the Wild — Real Projects, Workflows & Templates",
+    "description": "Browse curated Grok Bot projects: official team guides, Marketplace templates you can import, and open-source directories—with clear notes on what each one does.",
+    "ogTitle": "Grok Bot in the Wild",
+    "ogDescription": "Official guides, Marketplace bots and open-source experiments people are publishing with Grok Bot.",
+    "headline": "Grok Bot in the wild",
+    "support": "Real projects, workflows, templates and experiments."
   }
 } as const;
 export type SeoPath = keyof typeof PAGE_SEO;

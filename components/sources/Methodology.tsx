@@ -1,13 +1,11 @@
 import { Section } from "@/components/layout/Section";
 import { SectionHead } from "@/components/layout/SectionHead";
 import { METHODOLOGY } from "@/data/sources";
-import { LAST_UPDATED_LABEL } from "@/lib/site";
 
 export function Methodology() {
   return (
     <Section id="methodology" tone="wash">
       <SectionHead id="methodology" label="Methodology" title="How the guide tells them apart">
-        <p className="eyebrow mt-5 text-muted">Last updated {LAST_UPDATED_LABEL}</p>
         <dl className="mt-8 max-w-[920px] border-t border-rule">
           {METHODOLOGY.map((m) => (
             <div key={m.title} className="grid grid-cols-1 gap-2 border-b border-rule py-6 md:grid-cols-[minmax(11rem,30%)_minmax(0,1fr)] md:gap-x-7">

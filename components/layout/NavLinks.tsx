@@ -10,7 +10,7 @@ export function NavLinks({ pages }: { pages: GuidePage[] }) {
   return (
     <>
       {pages.map((p) => {
-        const current = pathname === p.href;
+        const current = p.href === "/" ? pathname === "/" : pathname === p.href || pathname.startsWith(`${p.href}/`);
         return (
           <Link
             key={p.href}

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { FOOTER_PAGES, HEADER_PAGES } from "@/data/navigation";
+import { HEADER_PAGES, SECONDARY_PAGES } from "@/data/navigation";
 import { Container } from "./Container";
 import { MobileMenu } from "./MobileMenu";
 import { NavLinks } from "./NavLinks";
@@ -20,7 +20,7 @@ export function Header() {
         <nav aria-label="Guide pages" className="hidden items-center gap-1 lg:flex">
           <NavLinks pages={HEADER_PAGES} />
         </nav>
-        <MobileMenu pages={HEADER_PAGES} extra={FOOTER_PAGES} />
+        <MobileMenu pages={HEADER_PAGES} extra={SECONDARY_PAGES} />
       </Container>
     </header>
   );

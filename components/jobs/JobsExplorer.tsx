@@ -1,14 +1,27 @@
 "use client";
 
 import { useDeferredValue, useId, useMemo, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import { CADENCE_LABEL, JOB_CATEGORIES, OVERSIGHT_LABEL, STARTER_JOBS, type Job, type JobCategory } from "@/data/jobs";
 import { JobCard } from "./JobCard";
 import { JobDialog } from "./JobDialog";
 
 type Filter = "All" | JobCategory;
 
+function filterFromParam(raw: string | null): Filter {
+  if (!raw) return "All";
+  const match = JOB_CATEGORIES.find((c) => c.toLowerCase() === raw.toLowerCase());
+  return match ?? "All";
+}
+
 export function JobsExplorer({ jobs }: { jobs: Job[] }) {
-  const [active, setActive] = useState<Filter>("All");
+  const searchParams = useSearchParams();
+  const categoryParam = searchParams.get("category");
+  const urlActive = filterFromParam(categoryParam);
+  // Local override for in-page filter clicks; resets when the URL category changes.
+  const [local, setLocal] = useState<{ param: string | null; filter: Filter } | null>(null);
+  const active = local && local.param === categoryParam ? local.filter : urlActive;
+  const setActive = (filter: Filter) => setLocal({ param: categoryParam, filter });
   const [query, setQuery] = useState("");
   const [open, setOpen] = useState<Job | null>(null);
   const q = useDeferredValue(query.trim().toLowerCase());

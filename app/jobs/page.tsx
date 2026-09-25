@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
+import { RelatedPosts } from "@/components/blog/RelatedPosts";
 import { JobsExplorer } from "@/components/jobs/JobsExplorer";
 import { JobsLegend } from "@/components/jobs/JobsLegend";
 import { Container } from "@/components/layout/Container";
 import { PageHeader } from "@/components/layout/PageHeader";
-import { SectionNav } from "@/components/layout/SectionNav";
 import { JOBS } from "@/data/jobs";
 import { pageMetadata } from "@/lib/site";
 
@@ -20,23 +21,22 @@ export default function Page() {
           They&rsquo;re sales, hiring, marketing and money.
         </p>
       </PageHeader>
-      <SectionNav sticky={false}
-        items={[
-          { id: "find", label: "Search" },
-          { id: "starters", label: "Good first jobs" },
-          { id: "all", label: "All 56" },
-        ]}
-      />
       <main id="main">
-        <section id="explorer" aria-labelledby="explorer-title" className="pb-24 pt-2 md:pb-32">
+        <section id="explorer" aria-labelledby="explorer-title" className="pb-24 pt-8 md:pb-32 md:pt-10">
           <Container>
             <h2 id="explorer-title" className="visually-hidden">
               Search and filter the jobs
             </h2>
-            <JobsExplorer jobs={JOBS} />
+            <Suspense fallback={<p className="font-display text-muted">Loading jobs…</p>}>
+              <JobsExplorer jobs={JOBS} />
+            </Suspense>
             <JobsLegend />
           </Container>
         </section>
+        <RelatedPosts
+          title="Role guides"
+          slugs={["grok-bot-for-marketing", "grok-bot-for-engineering", "grok-bot-for-sales-gtm"]}
+        />
       </main>
     </>
   );

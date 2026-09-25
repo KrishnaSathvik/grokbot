@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { RelatedPosts } from "@/components/blog/RelatedPosts";
 import { Comparison } from "@/components/how-it-works/Comparison";
 import { FiveThings } from "@/components/how-it-works/FiveThings";
 import { MorningTimeline } from "@/components/how-it-works/MorningTimeline";
@@ -24,6 +25,10 @@ export default function Page() {
         <Comparison />
         <FiveThings />
         <MorningTimeline />
+        <RelatedPosts
+          title="Related explainers"
+          slugs={["grok-bot-team-workflows", "grok-bot-security-shared-computer", "real-grok-bot-projects"]}
+        />
       </main>
     </>
   );

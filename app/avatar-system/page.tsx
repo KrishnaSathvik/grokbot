@@ -4,6 +4,7 @@ import { HeroAvatar } from "@/components/avatar/HeroAvatar";
 import { HowItIsDrawn } from "@/components/avatar/HowItIsDrawn";
 import { Moods } from "@/components/avatar/Moods";
 import { StateExplorer } from "@/components/avatar/StateExplorer";
+import { RelatedPosts } from "@/components/blog/RelatedPosts";
 import { Container } from "@/components/layout/Container";
 import { PageHeader } from "@/components/layout/PageHeader";
 import { Section } from "@/components/layout/Section";
@@ -127,6 +128,10 @@ export default function Page() {
             </p>
           </SectionHead>
         </Section>
+        <RelatedPosts
+          title="Further reading"
+          slugs={["grok-bot-github-projects", "real-grok-bot-projects"]}
+        />
       </main>
     </>
   );
